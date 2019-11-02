@@ -11,7 +11,11 @@ echo "this is the region: $region"
     do
     echo "this is the instance id: $instanceid"
     # This command stops all instances with the specific id
-    aws ec2 stop-instances --region $region --instance-ids $instanceid ;
+    ##aws ec2 stop-instances --region $region --instance-ids $instanceid ;
+    
+    # To start all ec2 uncomment the lin below 
+      aws ec2 start-instances --region $region --instance-ids $instanceid ;
+
     done
     
 done
