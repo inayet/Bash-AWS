@@ -14,11 +14,14 @@ instanceids=`aws ec2 describe-instances --region $region --filters 'Name=instanc
     # For each instance id loop through it
     for instanceid in $instanceids
     do
-    # To stops all instances with the specific id
-   # aws ec2 stop-instances --region $region --instance-ids $instanceid ;
+    # To stops all instances with the specific id uncomment the double ##
+    ## aws ec2 stop-instances --region $region --instance-ids $instanceid ;
 
-    # To start all ec2 uncomment the lin below 
-      aws ec2 start-instances --region $region --instance-ids $instanceid ;
+    # To start all ec2
+    ## aws ec2 start-instances --region $region --instance-ids $instanceid ;
+
+    # To terminate all ec2s uncomment below command
+       aws ec2 terminate-instances --region $region --instance-ids $instanceid ;
 
     done
 
