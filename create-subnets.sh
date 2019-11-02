@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# When executing this script in linux
-# Run dos2unix filename to correct the EOF EOL
-# Run dos2unix filename command for the script to run fine in linux since this script was edited in windows
+# Run dos2unix filename to correct the EOF EOL from windows to linux
+# To run this script correctly you must have a VPC configured in each region already 
+
 
 regions=`aws ec2 describe-regions --query Regions[*].RegionName --output text`
 
